@@ -1,0 +1,11 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.App {
+  box-sizing: border-box;
+  background-color: #f4f6fa;
+  font-family: Arial, sans-serif; /* You can adjust this based on your needs */
+  min-height: 100vh; /* Ensures the app takes full height of the viewport */
+}

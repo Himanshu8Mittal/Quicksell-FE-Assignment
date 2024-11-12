@@ -1,0 +1,59 @@
+/* src/Board.css */
+
+.board {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Space between columns */
+  overflow-x: auto; /* Horizontal scrolling if content overflows */
+  background-color: #f4f6fa; /* Light background color */
+  padding-bottom: 20px; /* Padding at the bottom for better spacing */
+  height: 90vh; /* 90% of viewport height */
+  scrollbar-width: thin; /* Thin scrollbar for Firefox */
+  scrollbar-color: transparent transparent; /* Transparent scrollbar for Firefox */
+}
+
+/* Customizing the scrollbar for Webkit browsers (Chrome, Safari) */
+.board::-webkit-scrollbar {
+  height: 8px; /* Thin scrollbar height */
+}
+
+.board::-webkit-scrollbar-track {
+  background: transparent; /* Transparent track background */
+}
+
+.board::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0); /* Transparent thumb for Webkit browsers */
+  border-radius: 4px; /* Rounded corners for the scrollbar thumb */
+}
+
+/* Responsive styles for medium and smaller screens */
+@media (max-width: 1024px) {
+  .board {
+    gap: 16px; /* Slightly smaller gap between columns */
+  }
+}
+
+@media (max-width: 768px) {
+  .board {
+    flex-direction: column; /* Stack columns vertically */
+    align-items: center; /* Center align columns */
+    overflow-x: hidden; /* Hide horizontal scrollbar on smaller screens */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    scrollbar-width: thin; /* Thin scrollbar for Firefox */
+    scrollbar-color: transparent transparent; /* Transparent scrollbar for Firefox */
+  }
+
+  /* Custom scrollbar styles for smaller screens */
+  .board::-webkit-scrollbar {
+    width: 8px; /* Thin scrollbar for smaller screens */
+  }
+
+  .board::-webkit-scrollbar-track {
+    background: transparent; /* Transparent track background */
+  }
+
+  .board::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0); /* Transparent thumb for Webkit browsers */
+    border-radius: 4px; /* Rounded corners for the scrollbar thumb */
+  }
+}
